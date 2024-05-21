@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "802739229173",
+    "firebase_url": "https://vibeservice-55e02-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "vibeservice-55e02",
+    "storage_bucket": "vibeservice-55e02.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:802739229173:android:92b352c62b013ace0990bc",
+        "android_client_info": {
+          "package_name": "ru.mrak.vibe"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJUjdMccC5tMK_mk32x4DBXb8rmUu8rtk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:802739229173:android:8e91fb62cf5839dd0990bc",
+        "android_client_info": {
+          "package_name": "ru.mrak.yourvibe"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJUjdMccC5tMK_mk32x4DBXb8rmUu8rtk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

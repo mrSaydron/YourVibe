@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primary">#0088CC</color>
+    <color name="accent">#FFFFFF</color>
+    <color name="grey">#5E5E5E</color>
+
+    <color name="green_true">#C7FFAC</color>
+    <color name="green_true_2">#E9FFDE</color>
+    <color name="red_false">#CCACAC</color>
+    <color name="red_false_2">#FFE2E2</color>
+
+    <color name="menu_background_color">#0088CC</color>
+</resources>

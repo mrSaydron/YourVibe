@@ -1,0 +1,47 @@
+package ru.mrak.yourvibe.ui.adapter
+
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
+import ru.mrak.yourvibe.R
+import ru.mrak.yourvibe.model.Vibe
+import ru.mrak.yourvibe.model.enums.ChoiceStatus
+import ru.mrak.yourvibe.ui.holder.VibeListHolder
+import ru.mrak.yourvibe.util.EventListener
+import ru.mrak.yourvibe.util.insert
+
+class VibeListAdapter(
+    private val longClickListener: ((Vibe) -> Unit)? = null,
+    private val comparator: Comparator<in Vibe>
+) : RecyclerView.Adapter<VibeListHolder>() {
+
+    private val itemList = mutableListOf<Vibe>()
+    private val choiceStatusList = mutableListOf<ChoiceStatus>()
+    private val eventListener = EventListener()
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VibeListHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.vibe_list_item, parent, false)
+        return VibeListHolder(view, eventListener, longClickListener)
+    }
+
+    override fun onBindViewHolder(holder: VibeListHolder, position: Int) {
+        holder.initFields(itemList[position], choiceStatusList[position])
+    }
+
+    override fun getItemCount(): Int {
+        return itemList.size
+    }
+
+    fun updateListItems(vibe: Vibe, choiceStatus: ChoiceStatus = ChoiceStatus.NOT_CHECKED) {
+        itemList.add(vibe)
+        val position = itemList.insert(vibe, comparator)
+        choiceStatusList.add(position, choiceStatus)
+        notifyItemInserted(position)
+    }
+
+    fun removeListItem(holder : VibeListHolder) {
+        itemList.removeAt(holder.layoutPosition)
+        choiceStatusList.removeAt(holder.layoutPosition)
+        notifyItemRemoved(holder.layoutPosition)
+    }
+}

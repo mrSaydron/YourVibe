@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/vibe_list_item"
+    android:layout_margin="4dp"
+    android:background="@drawable/item_true_loser">
+
+    <TextView
+        android:id="@+id/vibe_list_item_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/vibe_list_item_icon_attention"
+        tools:text="Vibe title. Long long long long long long long long long long long long long"/>
+
+    <ImageView
+        android:id="@+id/vibe_list_item_icon_owner"
+        android:layout_width="16dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_owner"
+        android:layout_marginEnd="8dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@+id/vibe_list_item_title"
+        app:layout_constraintBottom_toBottomOf="@+id/vibe_list_item_title"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/vibe_list_item_icon_attention"
+        android:layout_width="16dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_attention"
+        android:layout_marginEnd="4dp"
+        android:iconTint="@color/primary"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@+id/vibe_list_item_title"
+        app:layout_constraintBottom_toBottomOf="@+id/vibe_list_item_title"
+        app:layout_constraintEnd_toStartOf="@id/vibe_list_item_icon_owner"/>
+
+    <TextView
+        android:id="@+id/vibe_list_item_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintTop_toBottomOf="@+id/vibe_list_item_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Vibe description. Long long long long long long long long long long long"/>
+
+    <TextView
+        android:id="@+id/vibe_list_item_end_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/vibe_list_item_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="15 июля 1986"/>
+
+    <TextView
+        android:id="@+id/vibe_list_item_agree_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/vibe_list_item_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="50%"/>
+
+    <TextView
+        android:id="@+id/vibe_list_item_disagree_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/vibe_list_item_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="50%"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

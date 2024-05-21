@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/view_title_text_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/md_blue_grey_600"
+            tools:text="Наименование"/>
+
+        <TextView
+            android:id="@+id/view_title_text_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:maxLines="100"
+            tools:text="Наименование вайба, может быть многострочным"/>
+</LinearLayout>

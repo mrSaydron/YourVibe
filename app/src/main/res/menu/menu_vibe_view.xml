@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/ic_btn_action_menu"
+        app:showAsAction="ifRoom"
+        android:title=""
+        android:itemBackground="@color/black">
+        <menu>
+            <item
+                android:id="@+id/menu_vibe_view_true"
+                android:title="Результат: правда"
+                android:iconTint="@color/black"
+                app:showAsAction="never"
+                />
+            <item
+                android:id="@+id/menu_vibe_view_false"
+                android:title="Результат: неправда"
+                android:iconTint="@color/primary"
+                app:showAsAction="never"/>
+            <item
+                android:id="@+id/menu_vibe_view_agree"
+                android:title="Согласен"
+                android:iconTint="@color/primary"
+                app:showAsAction="never"/>
+            <item
+                android:id="@+id/menu_vibe_view_disagree"
+                android:title="Не согласен"
+                android:iconTint="@color/primary"
+                app:showAsAction="never"/>
+            <item
+                android:id="@+id/menu_vibe_view_edit"
+                android:title="Редактировать"
+                android:iconTint="@color/primary"
+                app:showAsAction="never"/>
+            <item
+                android:id="@+id/menu_vibe_view_delete"
+                android:title="Удалить"
+                android:iconTint="@color/primary"
+                app:showAsAction="never"/>
+        </menu>
+    </item>
+</menu>

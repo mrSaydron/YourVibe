@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Your Vibe</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <plurals name="voted_count_string">
+        <item quantity="one">Вы проголосовали за: %d вайб</item>
+        <item quantity="few">Вы проголосовали за: %d вайбa</item>
+        <item quantity="many">Вы проголосовали за: %d вайбов</item>
+        <item quantity="other">Вы проголосовали за: %d вайбов</item>
+    </plurals>
+
+    <plurals name="created_count_string">
+        <item quantity="one">Было создано: %d вайб</item>
+        <item quantity="few">Было создано: %d вайба</item>
+        <item quantity="many">Было создано: %d вайбов</item>
+        <item quantity="other">Было создано: %d вайбов</item>
+    </plurals>
+</resources>

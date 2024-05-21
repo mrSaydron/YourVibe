@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.statistic.StatisticFragment"
+    android:layout_margin="8dp">
+
+    <TextView
+        android:id="@+id/correct_answer_percent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:maxLines="2"
+        android:layout_margin="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Правильных ответов: 56% (112)" />
+
+    <TextView
+        android:id="@+id/wrong_answer_percent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:maxLines="2"
+        android:layout_margin="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/correct_answer_percent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Неправильных ответов: 44% (88)" />
+
+    <View
+        android:id="@+id/first_separator"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/bg_line_white"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/wrong_answer_percent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/voted_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:maxLines="2"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/first_separator"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Вы проголосовали за : 250 вайбов" />
+
+    <TextView
+        android:id="@+id/voted_in_waiting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:maxLines="2"
+        android:layout_margin="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/voted_count"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Проголосованные вайбы ожидают результата: 50" />
+
+    <View
+        android:id="@+id/second_separator"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/bg_line_white"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/voted_in_waiting"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/created_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:maxLines="2"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/second_separator"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Было создано: 35 вайбов" />
+
+    <TextView
+        android:id="@+id/created_in_waiting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:maxLines="2"
+        android:layout_margin="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/created_count"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Созданные вайбы ожидают результат: 15" />
+
+    <TextView
+        android:id="@+id/created_in_expired"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:maxLines="2"
+        android:layout_margin="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/created_in_waiting"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Вайбов без результата, с истекшим строком:  3" />
+
+    <View
+        android:id="@+id/third_separator"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/bg_line_white"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/created_in_expired"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/votes_given"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:maxLines="2"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/third_separator"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Всего было отдано голосов за Ваши вайбы: 386" />
+
+    <TextView
+        android:id="@+id/votes_given_average"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:maxLines="2"
+        android:layout_margin="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/votes_given"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="В среднем проголосовали за вайб: 52,3" />
+
+    <TextView
+        android:id="@+id/result_same_percent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:maxLines="2"
+        android:layout_margin="4dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/votes_given_average"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Результат и результат голосования совпадает в: 64% случаев" />
+</androidx.constraintlayout.widget.ConstraintLayout>
